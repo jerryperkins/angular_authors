@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Edit An Author</h1>
+    <div>
+        <a href="" [routerLink]="['/']">Home</a>
+        <form (submit)="edit_author(single_author._id)">
+            <label for="">Author Name</label>
+            <p *ngIf="error_message">{{error_message}}</p>
+            <input type="text" name="name" [(ngModel)]="single_author.name">
+            <input type="submit" value="Submit" >
+            <button [routerLink]="['/']">Cancel</button>
+        </form>
+        
+    </div>
+    
+</div>
